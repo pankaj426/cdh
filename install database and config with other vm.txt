@@ -1,0 +1,59 @@
+root@m2:~# apt-get install mysql-server
+
+mysql -u root -p
+
+mysql> show databases;
+
+use mysql
+
+mysql> select user,host from user;
+
+
+
+
+mysql> grant all privileges on *.* to 'hdu'@'%' identified by 'pankaj@123';
+
+mysql> grant all privileges on *.* to 'root'@'%' identified by 'pankaj@123';
+
+ grant all privileges on *.* to ''@'localhost' identified by 'pankaj@123';
+
+
+mysql> flush privileges;
+
+
+mysql> grant all privileges on *.* to 'hdfs'@'m1' identified by 'pankaj@123';
+
+grant all privileges on *.* to 'hdfs'@'m2' identified by 'pankaj@123';
+
+grant all privileges on *.* to 'hdfs'@'m3' identified by 'pankaj@123';
+grant all privileges on *.* to 'hdu'@'m2' identified by 'pankaj@123';
+
+grant all privileges on *.* to 'root'@'m1' identified by 'pankaj@123';
+
+grant all privileges on *.* to 'root'@'m2' identified by 'pankaj@123';
+
+ 
+
+mysql>  grant all privileges on *.* to ''@'localhost' identified by 'pankaj@123';
+
+
+
+
+
+
+
+
+root@m2:~# vi /etc/mysql/mysql.conf.d/mysqld.cnf
+
+service mysql restart
+
+
+
+
+
+root@m2:~# service mysql restart
+root@m1:~# apt install mariadb-client-core-10.0
+
+
+root@m1:~# mysql -h 10.0.2.5 -u root -p
+

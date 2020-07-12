@@ -1,0 +1,1 @@
+hdfs@m1:~$ kafka-topics --create --bootstrap-server m1:9092 --replication-factor 1 --partition 1 --topic mytest

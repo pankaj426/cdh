@@ -1,0 +1,82 @@
+ 1  ipaddress
+    2  ip address
+    3  ls
+    4  ls /etc/hots
+    5  ls /etc/hosts
+    6  ls -all  /etc/hosts
+    7  ping m2
+    8  ping m3
+    9  cd /etc
+   10  ls
+   11  cd hosts
+   12  cd
+   13  ipconfig
+   14  ip address
+   15  vi /etc/hosts
+   16  cat /etc/hosts
+    
+
+ufw disable
+
+
+root@m1:~# wget https://archive.cloudera.com/cm5/installer/5.16/cloudera-manager-installer.bin
+
+
+root@m1:~# chmod -R 777 cloudera-manager-installer.bin
+
+root@m1:~# ./cloudera-manager-installer.bin
+
+
+
+
+
+root@m1:~# ls /opt/
+cloudera
+root@m1:~# ls /opt/cloudera/
+csd  parcel-repo
+root@m1:~# ls /opt/cloudera/csd/
+root@m1:~# ls /opt/cloudera/parcel-repo/
+
+
+
+  ls /opt/
+   27  ls /opt/cloudera/
+   28  ls /opt/cloudera/csd/
+   29  ls /opt/cloudera/parcel-repo/
+   30  ls /var/log
+   31  ls /etc/h*
+   32  service  cloudera-scm-server status
+   33  service ntp status
+   34  service ntp start
+   35  yum install ntp
+   36  apt install ntp
+   37  service ntp status
+   38  history
+
+
+root@m1:~# service cloudera-scm-agent status
+
+root@m2:~# service cloudera-scm-agent status
+
+root@m3:~# service cloudera-scm-agent status
+
+
+
+
+
+root@m1:~# vi /etc/sysctl.conf
+            sysctl -p
+
+
+
+root@m1:~# ls -all /opt/cloudera/parcels
+hdu@m1:~$ ls /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib
+
+
+
+vi  /etc/cloudera-scm-agent/config.ini
+
+
+root@m4:~# vi /etc/sysctl.conf
+root@m4:~# sysctl -p
+

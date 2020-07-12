@@ -1,0 +1,51 @@
+  2  cd
+    3  vi .bashrc
+    4  java -version
+    5  source .bashrc
+    6  java -version
+    7  sudo su -
+    8  ssh m2
+    9  ssh m2
+   10  cd .ssh
+   11  ls
+   12  cat id_rsa.pub
+   13  vi  authorized_keys
+   14  ls
+   15  vi  authorized_keys
+   16  ssh m2
+   17  cd .ssh
+   18  ls
+   19  cat authorized_keys
+   20  vi authorized_keys
+   21  ssh m1
+   22  ssh m2
+   23  cd
+   24  ssh m1
+   25  ssh m2
+   26  vi  authorized_keys
+   27  cat id_rsa.pub
+   28  cd .ssh
+   29  cat id_rsa.pub
+   30  ls
+   31  cd
+   32  ssh-keygen -t rsa -P ""
+   33  cat id_rsa.pub
+   34  cd .ssh
+   35  cat id_rsa.pub
+   36  ssh m1
+   37  ssh m2
+   38  ls
+   39  cd /usr/local/
+   40  ls
+   41  sudo ln -s hadoop-2.6.5 hadoop
+   42  ls
+   43  ls -all
+   44  sudo chown -R pkadmin:pkadmin hadoop*
+   45  ls -all
+   46  cd
+   47  vi .bashrc
+   48  source .bashrc
+   49  haddop -version
+   50  hadoop -version
+   51  hadoop version
+   52  history

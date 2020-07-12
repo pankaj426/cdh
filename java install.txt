@@ -1,0 +1,57 @@
+ 1  ip address
+    2  vi /etc/hosts
+    3  apt-get install vim
+    4  apt-get update
+    5  apt-get install openssh-server
+    6  vi /etc/ssh/sshd_config
+    7  apt-get install ntp
+    8  service ssh restart
+    9  ufw disable
+   10  ufw status
+   11  ssh-keygen -t rsa -P ""
+   12  cs .ssh
+   13  cd .ssh
+   14  ls
+   15  cat authorized_keys
+   16  vi  authorized_keys
+   17  cat id_rsa.pub
+   18  ssh m1
+   19  sudo su -
+   20  ssh m1
+   21  wget
+   22  wget https://www.dropbox.com/s/pfqvvghf3le9v1i/jdk-8u221-linux-x64.tar.gz
+   23  ssh m1
+   24  exit
+   25  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+   26  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.8.3/hadoop-2.8.3.tar.gz
+   27  ls
+   28  history
+   29  mkdir /usr/lib/jvm
+   30  cd /usr/lib/jvm
+   31  tar -xvf /root/jdk-8u221-linux-x64.tar.gz
+   32  ls
+   33  chown -R root:root jdk1.8.0_221/
+   34  cd jdk1.8.0_221/
+   35  ls
+   36  cd /usr/lib/jvm
+   37  vi .bashrc
+   38  cd
+   39  vi .bashrc
+   40  source .bashrc
+   41  java -version
+   42  history
+root@m2:~# su pkadmin
+pkadmin@m2:/root$ cd
+pkadmin@m2:~$ vi .bashrc
+pkadmin@m2:~$ source .bashrc
+pkadmin@m2:~$ java -version
+java version "1.8.0_221"
+Java(TM) SE Runtime Environment (build 1.8.0_221-b11)
+Java HotSpot(TM) 64-Bit Server VM (build 25.221-b11, mixed mode)
+pkadmin@m2:~$ history
+    1  sudo su
+    2  cd
+    3  vi .bashrc
+    4  source .bashrc
+    5  java -version
+   

@@ -1,0 +1,31 @@
+pkadmin@m1:~$ hdfs dfs -rm -R -skipTrash /Bank_full.csv
+ls -all /orgz/name/current/
+
+
+pkadmin@m1:~$ hdfs dfsadmin -saveNamespace
+
+pkadmin@m1:~$ hdfs dfsadmin -safemode enter
+
+pkadmin@m1:~$ hdfs dfsadmin -saveNamespace
+
+pkadmin@m1:~$ ls -all /orgz/name/current/
+pkadmin@m1:~$ hdfs dfs -mkdir /pankaj
+
+pkadmin@m1:~$ hdfs dfsadmin -safemode leave
+
+
+pkadmin@m1:~$ hdfs dfsadmin -safemode get
+
+
+
+
+hadoop-daemon.sh stop secondarynamenode
+
+force checkpoint command
+
+hadoop-daemon.sh start secondarynamenode
+
+
+
+
+

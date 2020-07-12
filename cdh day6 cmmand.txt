@@ -1,0 +1,141 @@
+cat /var/log/cloudera-scm-server/cloudera-scm-server.log
+
+cat /var/log/cloudera-scm-agent/cloudera-scm-agent.log
+
+cat /var/log/cloudera-scm-agent/config.ini
+
+service cloudera-scm-agent start
+service cloudera-scm-server start
+
+service cloudera-scm-agent status
+service cloudera-scm-server status
+
+hdfs dfsadmin -safemode leave
+hdfs dfsadmin -safemode leave
+hdfs dfsadmin -safemode leave
+
+vi /etc/hosts
+
+service cloudera-scm-agent restart
+service cloudera-scm-server restart
+
+tail -f /var/log/cloudra-scm-agent/cloudera-scm-agent.log
+
+
+service rpcbind status
+if it is not active then start that service in all machine(gateway error)
+
+service rpcbind start
+service rpcbind status
+
+
+====================================================================
+====================================================================
+====================================================================
+crass cluster communicatiom
+first start cluser in both side with service
+
+download pem file in cluster machine
+start-dfs.sh
+start-yarn.sh
+
+chmod -R 400 cdhf.pem
+
+ssh -i "cdhf.pem" hdu@ip
+
+ls /opt/cloudera/
+hdfs
+dfs
+hdfs dfs -ls /
+
+
+hdfs dfs -ls hdfs://m1:8020/
+
+dhfs dfs -ls hdfs://ip:8020/
+
+
+note: #apache cluster :hdfs://u1:9000
+      #cludera cluster :hdfs://m1:8020
+
+
+
+hadoop distcp hdfs://u1:9000/samplefiles hdfs://ip(m1):8020/samplefilescpy
+
+by this command may be not able to cannect the cluster due to write permission then go to the cloudera machine go hdfs user and change then chamge the permission to the write
+
+
+hfds dfs -mkdir /hdudata
+hdfs dfs -chown -R hdu:hdu /hdudata
+hdfs dfs -ls /
+
+hadoop distcp hdfs://u1:9000/samplefiles hdfs://ip(m1):8020/hdudata/samplefilescpy
+
+if still not working change thenfirewall rull in google machine
+
+hdfs dfs -ls /hdudata/
+hdfs dfs -ls /hdudata/samplefilescpy
+
+
+
+
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+    
+hdfs@m1:~$ hdfs dfsadmin -report
+
+
+
+
+check machine on rack
+cat /etc/hadoop/conf/topology.map
+cat /etc/hadoop/conf/topology.py
+
+cat /etc/hadoop/conf/hdfs-site.xml
+
+
+===================================================================
+===================================================================
+===================================================================
+===================================================================
+
+hdfs balancer
+hdfs balancer -threshold 80
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

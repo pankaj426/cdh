@@ -1,0 +1,44 @@
+ls /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib/hive/conf
+
+
+
+
+root@m1:~# vi /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib/hive/conf/hive-site.xml
+
+set hive.execution.engine;
+
+set hive.execution.engine =tez;
+create database mydb;
+show databases;
+!hdfs dfs -ls /usr/hive/warehouse;
+
+
+beeline> !connect jdbc:hive2://m2:10000
+
+hive=username
+hive =pwd
+
+
+hive> use mydb;
+hive> create external table mytbl3(id int,name string);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

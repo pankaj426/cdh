@@ -1,0 +1,11 @@
+spark-shell
+val mydata = Array("hi","helloval 
+test1 = mydata.map(n => n.toUpperCase)","cool")
+ val mydata = Array("hi","hello","cool")
+val test1 = sc.paralleline(mydata)
+
+
+val x = sc.parallelize(Array("hi","shhjs","khjn"))
+
+
+val y = x.map(n => n.toUpperCase)

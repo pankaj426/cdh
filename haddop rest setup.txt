@@ -1,0 +1,81 @@
+ 1  sudo su
+    2  sudo su root
+    3  sudo su -
+    4  cd
+    5  vi .bashrc
+    6  source .bashrc
+    7  java -version
+    8  history
+    9  ssh m1
+   10  ssh-keygen -t rsa -P ""
+   11  cd .ssh
+   12  ls
+   13  cat id_rsa.pub
+   14  cd
+   15  vi  authorized_keys
+   16  cd .ssh
+   17  ls
+   18  vi  authorized_keys
+   19  cd
+   20  ssh m1
+   21  ssh m1
+   22  ssh m1
+   23  ssh m1
+   24  ssh m1
+   25  sudo su -
+   26  ssh m1
+   27  ssh m1
+   28  sudo su -
+   29  ls
+   30  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.8.3/hadoop-2.8.3.tar.gz
+   31  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+   32  ls
+   33  cd /usr/local/
+   34  sudo tar -xvf /home/pkadmin/hadoop-2.6.5.tar.gz
+   35  cd /usr/local/
+   36  ls -all
+   37  sudo ln -s hadoop-2.6.5 hadoop
+   38  sudo chown -R pkadmin:pkadmin hadoop*
+   39  ls -all
+
+ 1  sudo su
+    2  sudo su root
+    3  sudo su -
+    4  cd
+    5  vi .bashrc
+    6  source .bashrc
+    7  java -version
+    8  history
+    9  ssh m1
+   10  ssh-keygen -t rsa -P ""
+   11  cd .ssh
+   12  ls
+   13  cat id_rsa.pub
+   14  cd
+   15  vi  authorized_keys
+   16  cd .ssh
+   17  ls
+   18  vi  authorized_keys
+   19  cd
+   20  ssh m1
+   21  ssh m1
+   22  ssh m1
+   23  ssh m1
+   24  ssh m1
+   25  sudo su -
+   26  ssh m1
+   27  ssh m1
+   28  sudo su -
+   29  ls
+   30  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.8.3/hadoop-2.8.3.tar.gz
+   31  wget http://archive.apache.org/dist/hadoop/common/hadoop-2.6.5/hadoop-2.6.5.tar.gz
+   32  ls
+   33  cd /usr/local/
+   34  sudo tar -xvf /home/pkadmin/hadoop-2.6.5.tar.gz
+   35  ls
+   36  cd
+   37  ls -all
+   38  vi .bashrc
+   39  sorce .bashrc
+   40  source .bashrc
+   41  history

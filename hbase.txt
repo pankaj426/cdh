@@ -1,0 +1,7 @@
+create 'stud', 'info'
+describe 'stud'
+scan 'stud'
+
+put 'stud', 's1', 'info:name', 'vijay'
+put 'stud', 's1', 'info:id', 'vi5364jay'
+put 'stud', 's2', 'info:id', 'vi533465sdv64jay'

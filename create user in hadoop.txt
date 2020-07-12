@@ -1,0 +1,23 @@
+hdfs@m1:~$ hdfs dfs -mkdir /developer
+hdfs@m1:~$ hdfs dfs -chmod -R 777 /developer
+root@m1:~# adduser dev1
+
+root@m1:~# cp .bashrc /home/dev1/
+
+
+hdfs@m1:~$ hdfs dfs -chown -R dev1:dev1 /tmp
+hdfs@m1:~$ hdfs dfs -chown -R dev1:dev1 /user
+
+
+
+dev1@m1:~$ hadoop jar /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar wordcount /text.txt /developer/out3
+
+
+
+
+
+
+
+hdu@m1:~$ sudo adduser dev2
+
+hdu@m1:~$ sudo cp .bashrc /home/dev2/

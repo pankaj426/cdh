@@ -1,0 +1,160 @@
+ ssh-copy-id -i $HOME/.ssh/id_rsa.pub pkadmin@m1
+
+cat $HOME/.ssh/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
+ ssh-keygen -t rsa -P ""
+
+
+
+cp -r Hadoop_Spark_Setup-master /home/pkadmin/
+
+sudo chown -R pkadmin:pkadmin Hadoop_Spark_Setup-master
+
+
+pkadmin@m1:/usr/local/hadoop$ mv etc/hadoop/mapred-site.xml.template etc/hadoop/mapred-site.xml
+
+
+pkadmin@m1:~/Hadoop_Spark_Setup-master/hadoopconf2.6.5/node1$ cp -r hadoop /usr/local/hadoop/etc
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi hadoop-env.sh
+
+
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi core-site.xml
+
+
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ scp core-site.xml pkadmin@m2:/usr/local/hadoop/etc/hadoop/
+
+
+
+pkadmin@m1:~/Hadoop_Spark_Setup-master/hadoopconf2.6.5/node2$ scp -r hadoop pkadmin@m2:/usr/local/hadoop/etc/
+
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ scp core-site.xml pkadmin@m2:/usr/local/hadoop/etc/hadoop/
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi hdfs-site.xml
+
+pkadmin@m2:/usr/local/hadoop/etc/hadoop$ vi hdfs-site.xml
+
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi mapred-site.xml
+
+
+pkadmin@m2:/usr/local/hadoop/etc/hadoop$ vi mapred-site.xml
+
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi yarn-site.xml
+
+
+
+pkadmin@m2:/usr/local/hadoop/etc/hadoop$ vi yarn-site.xml
+
+
+pkadmin@m2:/usr/local/hadoop/etc/hadoop$ vi slaves
+
+pkadmin@m1:/usr/local/hadoop/etc/hadoop$ vi slaves
+
+
+
+
+
+
+pkadmin@m1:~$ sudo mkdir /orgz
+pkadmin@m1:~$ sudo chown -R pkadmin:pkadmin /orgz
+
+
+pkadmin@m2:~$ sudo mkdir /orgz
+pkadmin@m2:~$ sudo chown -R pkadmin:pkadmin /orgz
+
+
+hdfs namenode -format
+ls -all /orgz
+
+
+pkadmin@m1:~$ ls -all /orgz/name/current
+
+
+
+
+
+
+
+
+
+
+pkadmin@m1:~$ start-dfs.sh
+
+jps
+
+
+start-yarn.sh
+
+stop-yarn.sh
+stop-dfs.sh
+pkadmin@m1:~$ ls -all /orgz/name/current/
+
+pkadmin@m1:~$ hdfs dfsadmin -report
+
+
+pkadmin@m2:/usr/local/hadoop/sbin$ mr-jobhistory-daemon.sh start historyserver
+
+
+
+pkadmin@m1:/usr/local/hadoop/sbin$ mr-jobhistory-daemon.sh start historyserver
+
+mr-jobhistory-daemon.sh stop historyserver
+
+
+
+
+
+
+
+pkadmin@m1:~$ hdfs dfs -copyFromLocal Bank_full.csv /
+pkadmin@m1:~$ hdfs dfs -mkdir /mydata
+pkadmin@m1:~$ hdfs dfs -mkdir /mydata/Bank_full.cv
+pkadmin@m1:~$ rm -rf Bank_full.cvs
+pkadmin@m1:~$ hdfs dfs -ls -R /
+
+
+pkadmin@m1:~$ hdfs dfs -get /Bank_full.csv
+
+pkadmin@m1:~$ hdfs fsck / -files -blocks
+
+
+pkadmin@m1:~$ hdfs dfs -put /usr/local/hadoop/logs/*.log /logdata
+
+pkadmin@m1:~$ hdfs dfs -ls /logdata
+
+
+
+
+adduser demo
+root@m1:~# scp /home/pkadmin/.bashrc /home/demo
+
+demo@m1:~$ hdfs dfs -ls /
+ demo@m1:~$ hdfs dfs -cat /Bank_full.csv
+
+
+
+pkadmin@m1:~$ hdfs dfs -mkdir /demouser
+hdfs dfs -chown -R demo:demo /demouser
+
+
+
+
+pkadmin@m1:~/Hadoop_Spark_Setup-master/hadoopconf2.6.5$ cp my* /home/pkadmin/
+
+
+
+
+pkadmin@m1:~$ hdfs dfs -mkdir /comman4all
+pkadmin@m1:~$ hdfs dfs -chown -R 777 /comman4all
+
+
+pkadmin@m1:~$ ./mywrap.sh
+
+
+
+

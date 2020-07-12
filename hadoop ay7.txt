@@ -1,0 +1,14 @@
+pig
+grunt> A = load '/history.txt/auction.csv' using PigStorage(':');
+
+dump A;
+
+hive
+show databases;
+show tables;
+
+
+
+apt-get install git
+
+git clone url

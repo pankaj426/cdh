@@ -1,0 +1,55 @@
+root@m1:~# vi  /etc/default/cloudera-scm-server
+
+
+
+
+sq00p
+
+
+root@m1:~# tar -xvf mysql-connector-java-5.1.49.tar.gz
+
+root@m1:~# cp mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib/sqoop/lib/
+
+root@m1:~# cp mysql-connector-java-5.1.49/mysql-connector-java-5.1.49.jar /home/hdu/
+
+chomd 400 cdhd.pem
+
+root@m1:~# chown -R hdu:hdu /home/hdu/mysql-connector-java-5.1.49.jar
+
+hdu@m1:~$ scp -i "cdhf.pem" mysql-connector-java-5.1.49.jar hdu@m2:/home/hdu/
+
+hdu@m1:~$ scp -i "cdhf.pem" mysql-connector-java-5.1.49.jar hdu@m3:/home/hdu/
+
+hdu@m1:~$ scp -i "cdhf.pem" mysql-connector-java-5.1.49.jar hdu@m4:/home/hdu/
+
+
+
+cp /home/hdu/mysql-connector-java-5.1.49.jar /opt/cloudera/parcels/CDH-5.16.2-1.cdh5.16.2.p0.8/lib/sqoop/lib/
+
+
+hdfs@m1:~$ sqoop list-databases --connect jdbc:mysql://m2/mysql --username hdfs -P
+
+
+
+hdfs@m1:~$ sqoop list-databases --connect jdbc:mysql://m2/mysql?useSSL=false --username hdfs -P
+
+
+
+hdfs@m1:~$ sqoop list-tables --connect jdbc:mysql://m2/mysql?useSSL=false --username hdfs -P
+
+
+hdfs@m1:~$ sqoop import-all-tables --connect jdbc:mysql://m2/mysql?useSSL=false --username hdfs -P
+
+
+
+hdfs@m1:~$ sqoop import-all-tables --connect jdbc:mysql://m2/mysql?useSSL=false --username hdfs -P --m 1
+
+
+hdfs@m1:~$ sqoop import "-Dmapreduce.framework.name=local" --connect jdbc:mysql://m2/mysql?useSSL=false --username hdfs -P --m 1 --table help_keyword --target-dir /helpkey1 --as-avrodatafile
+
+
+
+
+
+
+
