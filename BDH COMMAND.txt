@@ -1,0 +1,19 @@
+sudo su
+cd
+ip address
+vi /etc/hosts
+hostname
+apt-get install vim
+
+apt-get install wget
+apt-get install openssh-server
+vi /etc/ssh/sshd_config
+service sssh restart
+java -version
+ufw disable
+ufw stop(not nee)
+ufw status
+wget java
+
+
+
